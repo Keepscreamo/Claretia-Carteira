@@ -1,138 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="windows-1252">
+    <meta charset="UTF-8">
     <title>SGA - Sistema Gerenciador de Aprendizagem</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="animate.css">
-    <link rel="stylesheet" href="font-awesome.min.css">
-    <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="plugin.css">
     <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="select2.css">
-    <link rel="stylesheet" href="select2-bootstrap.css">
-    <link rel="stylesheet" href="_all.css">
-    <link rel="stylesheet" href="jquery.custombox.css">
-    <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="sga.css">
+    <link rel="stylesheet" href="layout.css">
 
     <style>
-        .container {
+        /* Use um ID ou uma classe única para não quebrar o .container do Bootstrap */
+        .card-digital {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             margin: 2rem auto;
-            width: 100%;
-            max-width: 75rem;
-            font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-            font-size: 1.5rem;
-            color: #717171;
+            width: 95%;
+            max-width: 750px;
+            font-family: "Open Sans", sans-serif;
             background-color: #f3f5f9;
             border: 1px solid #717171;
             border-radius: 1.5rem;
             padding: 2rem;
+            color: #717171;
         }
 
-        header {
+        .card-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: none; /* Remove linha do bootstrap se houver */
+            background: transparent;
         }
 
-            header > img {
-                max-width: 20rem;
+            .card-header img {
+                max-width: 150px;
             }
 
-        h1 {
-            font-size: 4rem;
-            font-weight: 600;
-        }
-
-        main {
+        .card-main {
             display: flex;
-            justify-content: space-between;
+            gap: 20px;
             align-items: center;
-            margin: 3rem 0;
+            margin: 2rem 0;
         }
 
-            main > img {
-                max-height: 20rem;
-                border-radius: 0.75rem;
-            }
-
-            main > div {
-                background: #fff;
-                border-radius: 1.2rem;
-                width: 100%;
-                max-width: 45rem;
-                padding: 2rem;
-                margin-left: 2rem;
-            }
-
-        footer {
-            text-align: center;
-            font-size: 1.5rem;
+        .foto-aluno {
+            width: 180px;
+            height: auto;
+            border-radius: 0.75rem;
+            border: 3px solid #fff;
         }
 
-        .text-bold {
-            font-weight: 700;
-        }
-
-        .text-success {
-            color: #92cf5c;
+        .info-aluno {
+            background: #fff;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            flex-grow: 1;
         }
 
         @media (max-width: 600px) {
-            main {
+            .card-main {
                 flex-direction: column;
+                text-align: center;
             }
-
-                main > div {
-                    margin: 1rem 0;
-                }
         }
     </style>
 </head>
 
 <body>
-
-    <div class="container">
-        <header>
-            <img src="logo-sga-login.png" alt="Claretiano - Rede de Educação">
-            <h1>Carteirinha Digital</h1>
+    <div class="card-digital">
+        <header class="card-header">
+            <img src="logo-sga-login.png" alt="Claretiano">
+            <h2 style="font-weight: 800; margin: 0;">Carteirinha Digital</h2>
         </header>
 
-        <main>
-            <img src="264497-0d0628ceba61cbab20dc8a9bbf0470d6.jpg" alt="Foto do aluno">
+        <main class="card-main">
+            <img src="264497-0d0628ceba61cbab20dc8a9bbf0470d6.jpg" class="foto-aluno" alt="Aluno">
 
-            <div>
+            <div class="info-aluno">
                 <p><strong>Nome:</strong> José Airton Sartori Junior</p>
                 <p><strong>Matrícula:</strong> 8161084</p>
-                <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas, Tecnológico</p>
-                <p><strong>Situação:</strong> <span class="text-bold text-success">ATIVO</span></p>
+                <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
+                <p><strong>Situação:</strong> <span style="color: #92cf5c; font-weight: bold;">ATIVO</span></p>
                 <p><strong>Término:</strong> 07/2026</p>
             </div>
         </main>
 
-        <footer>
+        <footer style="text-align: center; font-size: 0.9rem;">
             <small>© 2026 • Claretiano - Rede de Educação</small>
         </footer>
     </div>
-
-    <!-- JS -->
-    <script src="jquery.min.js"></script>
-    <script src="jquery-ui.js"></script>
-    <script src="select2.min.js"></script>
-    <script src="bootstrap.js"></script>
-    <script src="app.js"></script>
-    <script src="app.plugin.js"></script>
-
 </body>
 </html>
