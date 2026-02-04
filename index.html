@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SGA - Sistema Gerenciador de Aprendizagem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="https://sga.claretiano.edu.br/sav/res/favicon.ico">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 2rem auto;
+            width: 100%;
+            max-width: 75rem;
+            font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 1.5rem;
+            color: #717171;
+            background-color: #f3f5f9;
+            border: 1px solid #717171;
+            border-radius: 1.5rem;
+            padding: 2rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            header > img {
+                max-width: 20rem;
+            }
+
+            header > div {
+                width: 100%;
+                text-align: center;
+            }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 600;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 3rem 0;
+        }
+
+            main > img {
+                max-height: 20rem;
+                border-radius: 0.75rem;
+            }
+
+            main > div {
+                display: flex;
+                flex-direction: column;
+                background: #fff;
+                border-radius: 1.2rem;
+                width: 100%;
+                max-width: 45rem;
+                padding: 2rem 2rem 0 2rem;
+                margin-left: 2rem;
+            }
+
+                main > div > p {
+                    margin-bottom: 1rem;
+                }
+
+        footer {
+            text-align: center;
+            vertical-align: bottom;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+                main > div {
+                    min-width: 20rem;
+                    margin: 1rem;
+                }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .text-bold {
+            font-weight: 700;
+        }
+
+        .text-success {
+            color: #92cf5c;
+        }
+
+        .text-danger {
+            color: #fb6b5b;
+        }
+
+        .updated-at {
+            text-align: end;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    ============================================
+    CARTEIRINHA DIGITAL - CLARETIANO
+    ============================================
+    Para personalizar, edite os campos abaixo:
+    - Nome do aluno
+    - Matrícula
+    - Curso
+    - Situação (ATIVO/INATIVO)
+    - Data de término
+    - Foto do aluno (substitua a URL da imagem)
+    ============================================
+    -->
+
+    <div class="container">
+        <header>
+            <!-- Logo Claretiano - Pode ser substituída por logo local -->
+            <img id="img-login" src="https://sga.claretiano.edu.br/sav/res/img/logo-sga-login.png" alt="Claretiano - Rede de Educação">
+            <div>
+                <h1 class="text-center">Carteirinha Digital</h1>
+            </div>
+        </header>
+
+        <main>
+            <!-- Foto do Aluno - SUBSTITUA ESTA URL pela foto desejada -->
+            <img src="https://storage.googleapis.com/sgasav-uploads/uploads/fotos-cd/264497-0d0628ceba61cbab20dc8a9bbf0470d6.jpg?GoogleAccessId=sgasav-uploads@sga-prod-compute.iam.gserviceaccount.com&Expires=1770226591&Signature=V3a2BFXw1%2F%2B62K%2Bk5%2FIPfURt7ysymD9wFx44NFncZw3hsLUxfx213Ypov6la9bJXHnLlsZYtvQ4SSsN9KpL7S8UO3zCxp%2Ba5pwWB1KWxbFVcXp6idIeSPQSgPZRydovQC6eaLr6AsEDRcpfEsPT%2BDQRSwdbdhnO7%2Ffyd%2BwD11RG2B3vyTdobHvO8xtXhnOObwjLFu4%2B8zKuZ0VOLD3DhLwccGW8lyKuWkFz4xkhJXlaEuzmp0B8w1T%2FbUKZP%2BD8B%2BaWcGV5t3BRsvniBk1nsSGeB%2BM8k0rKpzQ60i77ObopdFY77ryHY%2FXPMk12FLsTv9CS1TrnBFymkoLtIe8E52Q%3D%3D" alt="Foto do Aluno">
+
+            <div>
+                <!-- DADOS DO ALUNO - Edite aqui -->
+                <p><strong>Nome:</strong> José Airton Sartori Junior</p>
+                <p><strong>Matrícula:</strong> 8161084</p>
+                <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas, Tecnológico</p>
+                <p><strong>Situação:</strong> <span class="text-bold text-success">ATIVO</span></p>
+                <p><strong>Término:</strong> 07/2026</p>
+                <p class="updated-at">atualizado em: 04/02/2026 10:13</p>
+            </div>
+        </main>
+
+        <footer>
+            <small>© 2026 • Claretiano - Rede de Educação</small>
+        </footer>
+    </div>
+</body>
+</html>
